@@ -1,0 +1,9 @@
+#Ignore .env file contains token
+*.env
+#Ignore pycach
+__pycache__/
+#Ignore avatar image
+TylerBotIcon.ico
+TylerBotImage.jpg
+#Ignore batch file used to run bot on my PC
+TylerBot.bat
