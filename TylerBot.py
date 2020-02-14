@@ -44,19 +44,19 @@ async def on_message(message):
         if len(words) != 3:
             await message.channel.send('Invalid Input')
             return
-        
-        await message.channel.send('{} x {}\nNormal {}\nFighting {}\nFlying {}\nPoison {}\nGround {}\nRock \
-                                   {}\nBug {}\nGhost {}\nSteel {}\nFire {}\nWater {}\nGrass {}\nElectric {}\nPsychic \
-                                   {}\nIce {}\nDragon {}\nDark {}\nFairy {}'.format(words[1].capitalize(),
-                                   words[2].capitalize(),*smartcomb(words[1],words[2])))
+        typemess = '{} x {}\nNormal {}\nFighting {}\nFlying {}\nPoison {}\nGround {}\nRock'\
+                                   '{}\nBug {}\nGhost {}\nSteel {}\nFire {}\nWater {}\nGrass {}\nElectric {}\nPsychic {}'\
+                                   '\nIce {}\nDragon {}\nDark {}\nFairy {}'.format(words[1].capitalize(),
+                                   words[2].capitalize(),*smartcomb(words[1],words[2]))
+        await message.channel.send(typemess)
     
-    if 'whos joe' in stripmess or 'who is joe' in stripmess:
+    if 'whos joe' in stripmess or 'who is joe' in stripmess: #responds Joe Mamam! to messages which ask who is joe
         await message.channel.send('Joe Mama!')
     
-    if 'jojo' in stripmess:
+    if 'jojo' in stripmess:     #responds Nigerundayo Smokey! to messages including the phrase jojo
         await message.channel.send('Nigerundayo Smokey!')
         
-    if 'er' in stripmess:
+    if 'er' in stripmess:       #Responds {}er? I hardly even know 'er to messages including words that end in er
         words = stripmess.split()
         for x in words:
             if x == badword:
