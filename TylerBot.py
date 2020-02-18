@@ -66,18 +66,18 @@ async def on_message(message):
                 erword = x
                 await message.channel.send('{}? I hardly even know \'er!'.format(erword.capitalize()))
                 break
-    if str(message.author) == 'Super Pinkacho Bros. Official#5601':
-        if message.content == '!getlogs':
-            messages = await message.channel.history(limit=1000000).flatten()
-            mymessages = [item for item in messages if str(item.author) == 'Super Pinkacho Bros. Official#5601']
-            contents = [x.content for x in mymessages]
-            messcontent = [item + '\n' for item in contents if not '!' in item]
-            messcontent = [item for item in messcontent if not '<' in item]
-            messcontent = [item for item in messcontent if len(item.split()) > 1]
-            messcontent = [item for item in messcontent if item[0].isalpha()]
-            with open('jupiterlog.txt','w',encoding='utf-8') as logfile:
-                logfile.writelines(messcontent)
-                print('Done')
+#    if str(message.author) == 'Super Pinkacho Bros. Official#5601':
+#        if message.content == '!getlogs':
+#            messages = await message.channel.history(limit=10000000).flatten()
+#            mymessages = [item for item in messages if str(item.author) == 'Super Pinkacho Bros. Official#5601']
+#            contents = [x.content for x in mymessages]
+#            messcontent = [item + '\n' for item in contents if not '!' in item]
+#            messcontent = [item for item in messcontent if not '<' in item]
+#            messcontent = [item for item in messcontent if len(item.split()) > 1]
+#            messcontent = [item for item in messcontent if item[0].isalpha()]
+#            with open('jupiterlog.txt','a',encoding='utf-8') as logfile:
+#                logfile.writelines(messcontent)
+#                print('Done')
 
 client.run(token)
 
