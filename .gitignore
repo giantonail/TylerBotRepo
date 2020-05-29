@@ -4,3 +4,4 @@
 __pycache__/
 #Under Testing/personal data
 jupiterlog.txt
+*.bat
